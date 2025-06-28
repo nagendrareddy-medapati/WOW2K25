@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import LandingPage from './components/LandingPage';
-import AuthPage from './components/AuthPage';
-import Dashboard from './components/Dashboard';
-import { AuthProvider, useAuth } from './contexts/AuthContext';
+import AuthPage from './components/MongoAuthPage';
+import Dashboard from './components/MongoDashboard';
+import { MongoAuthProvider, useAuth } from './contexts/MongoAuthContext';
 
 function AppRoutes() {
   const { user, loading } = useAuth();
@@ -50,13 +50,13 @@ function AppRoutes() {
 
 function App() {
   return (
-    <AuthProvider>
+    <MongoAuthProvider>
       <Router>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <AppRoutes />
         </div>
       </Router>
-    </AuthProvider>
+    </MongoAuthProvider>
   );
 }
 
