@@ -4,12 +4,12 @@ import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import authRoutes from './Routes/Auth.js';
-import userRoutes from './Routes/users.js';
-import walletRoutes from './Routes/Wallets.js';
-import currencyRoutes from './Routes/Currencies.js';
-import transactionRoutes from './Routes/Transactions.js';
-import { errorHandler } from './middleware/errorhandler.js';
+import authRoutes from './routes/auth.js';
+import userRoutes from './routes/users.js';
+import walletRoutes from './routes/wallets.js';
+import currencyRoutes from './routes/currencies.js';
+import transactionRoutes from './routes/transactions.js';
+import { errorHandler } from './middleware/errorHandler.js';
 import { seedDatabase } from './utils/seedData.js';
 
 dotenv.config();

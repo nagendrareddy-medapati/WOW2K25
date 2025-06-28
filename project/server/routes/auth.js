@@ -1,7 +1,7 @@
 import express from 'express';
 import jwt from 'jsonwebtoken';
 import { body, validationResult } from 'express-validator';
-import User from '../models/user.js';
+import User from '../models/User.js';
 import Session from '../models/Session.js';
 import Wallet from '../models/Wallet.js';
 import { asyncHandler } from '../middleware/asyncHandler.js';
